@@ -35,3 +35,11 @@ def compute_embeddings(text, class_embedding=True, mean_embedding=True):
         return mean_embedding
     else:
         raise ValueError('At least one of class_embedding and mean_embedding must be True')
+
+if __name__ == '__main__':
+    text = "Apple Inc. is an American multinational technology company"
+    embeddings = compute_embeddings(text)
+    print(embeddings)
+    print(embeddings.shape)
+    print(embeddings[0].shape)
+    print(embeddings[1].shape)
